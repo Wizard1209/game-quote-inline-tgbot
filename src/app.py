@@ -1,3 +1,4 @@
+import asyncio
 from pathlib import Path
 import sys
 
@@ -30,4 +31,4 @@ if __name__ == '__main__':
         raise RuntimeError("Path for API key was not provided")
     api_key = load_api_key(Path(sys.argv[1]))
     bot = Bot(api_key)
-    main(bot)
+    asyncio.run(main(bot))
