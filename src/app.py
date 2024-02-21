@@ -5,7 +5,7 @@ import sys
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from aiogram.filters import CommandStart
-from aiogram.utils.markdown import hbold
+from aiogram.utils.markdown import bold
 
 def load_api_key(api_key_path: Path):
     if not api_key_path.exists():
@@ -17,7 +17,7 @@ def load_api_key(api_key_path: Path):
 def init_handlers(dp: Dispatcher):
     @dp.message(CommandStart())
     async def command_start_handler(message: Message) -> None:
-        await message.answer(f"Hello, {hbold(getattr(message.from_user, 'full_name', 'noname'))}!")
+        await message.answer(f"Hello, {bold(getattr(message.from_user, 'full_name', 'noname'))}!")
 
 
 async def main(bot: Bot) -> None:
