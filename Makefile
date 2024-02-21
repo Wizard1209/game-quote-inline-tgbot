@@ -1,3 +1,6 @@
+polling:
+	python src/app.py api_key.txt
+
 build:
 	docker-compose build
 
