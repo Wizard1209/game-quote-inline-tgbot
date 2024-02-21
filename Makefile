@@ -1,8 +1,12 @@
 build:
-	docker build -t game_quote_bot_image:$(shell git rev-parse --abbrev-ref HEAD) .
+	docker-compose build
 
-run:
-	docker run -v src:/app/src -v api_key.txt:/app/api_key.txt --name game_quote_bot game_quote_bot_image:$(shell git rev-parse --abbrev-ref HEAD)
+up:
+	docker-compose up -d
 
-stop:
-	docker stop game_quote_bot && docker rm game_quote_bot
+down:
+	docker-compose down
+
+rebuild: down build up
+
+.PHONY: build up down rebuild

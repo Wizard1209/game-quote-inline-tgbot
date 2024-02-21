@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  game_quote_bot:
+    build:
+      dockerfile: Dockerfile
+    image: game_quote_bot_image:latest
+    volumes:
+      - ./src:/app/src
+      - ./api_key.txt:/app/api_key.txt
+    expose:
+      - 80
+    labels:
+      - traefik.enable=true
+      - "traefik.http.routers.game_quote_bot.rule=Host(`ltgmc.online`) && PathPrefix(`/bot`)"
+      - "traefik.http.routers.game_quote_bot.tls=true"
+      - "traefik.http.routers.game_quote_bot.tls.certResolver=lets-encrypt-ssl"
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    external: true
