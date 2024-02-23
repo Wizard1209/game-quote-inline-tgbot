@@ -11,7 +11,7 @@ services:
       - ./quotes.json:/app/quotes.json
     expose:
       - 80
-    command: ["python", "api_key.txt", "quotes.json"]
+    command: ["python", "src/app.py", "api_key.txt", "quotes.json"]
     labels:
       - traefik.enable=true
       - "traefik.http.routers.game_quote_bot.rule=Host(`ltgmc.online`) && PathPrefix(`/bot`)"
