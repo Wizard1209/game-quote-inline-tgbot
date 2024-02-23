@@ -26,7 +26,7 @@ def load_api_key(api_key_path: Path):
     if not api_key_path.exists():
         raise FileNotFoundError('API key path does not exist')
 
-    return api_key_path.read_text()
+    return api_key_path.read_text().strip()
 
 
 def init_handlers(dp: Dispatcher, bot: Bot):
