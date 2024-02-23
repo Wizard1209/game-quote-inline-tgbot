@@ -77,6 +77,11 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace):
                 ))
         await message.answer(list(results))  # TODO: fix mypy xd no comments)
 
+    # TODO: save user choose
+    #@dp.chosen_inline_result()
+    #async def chosen_inline_result(chosen_inline_result: types.ChosenInlineResult):
+    #    pass
+
 
 async def on_startup(bot: Bot) -> None:
     LOGGER.info(f'Registering webhook: {WEBHOOK_URL}')
