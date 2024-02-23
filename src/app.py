@@ -67,8 +67,6 @@ def main(bot: Bot) -> None:
 
 
 if __name__ == '__main__':
-    # TODO: debug log all loggers
-    # TODO: write webhook
     # TODO: add flag for selecting polling or webhook
     logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
     if len(sys.argv) < 2:
