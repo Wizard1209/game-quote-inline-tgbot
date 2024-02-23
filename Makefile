@@ -13,6 +13,6 @@ down:
 logs:
 	docker compose logs -f
 
-rebuild: down build up
+r: down up
 
-.PHONY: build up down rebuild
+.PHONY: polling build up down logs r
