@@ -5,10 +5,12 @@ from pathlib import Path
 import sys
 import logging
 from typing import Callable, TypedDict
+import uuid
 
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from aiogram.types.inline_query import InlineQuery
+from aiogram.types.inline_query_result_audio import InlineQueryResultAudio
 from aiogram.utils.markdown import bold
 from aiogram.client.default import DefaultBotProperties
 from aiogram.client.session.middlewares.request_logging import RequestLogging
@@ -54,7 +56,9 @@ def load_api_key(api_key_path: Path):
     return api_key_path.read_text().strip()
 
 
-def init_handlers(dp: Dispatcher, bot: Bot):
+def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace):
+    quotes_data: list[QuoteInfo] = read_quotes_file(args.quotes_file)
+
     @dp.message()
     async def command_start_handler(message: Message) -> None:
         LOGGER.debug(f'Message: {getattr(message.from_user, 'full_name', 'noname')} - {message.text or message.content_type if len(message.text or message.content_type) < 15 else 'Long message'}')
@@ -63,7 +67,15 @@ def init_handlers(dp: Dispatcher, bot: Bot):
     @dp.inline_query()
     async def inline_query(message: InlineQuery) -> None:
         LOGGER.debug(f'Inline: {message.from_user.full_name} - {message.query if len(message.query) < 15 else 'Long query'}')
-        #await message.answer([r1, r2])
+        results: list[InlineQueryResultAudio] = []
+        for q in quotes_data:
+            if message.query.lower() in q['hero'].lower() or message.query.lower() in q['lyrics'].lower():
+                results.append(InlineQueryResultAudio(
+                    id=str(uuid.uuid4()),
+                    audio_url=q['url'],
+                    title=q['hero']
+                ))
+        await message.answer(list(results))  # TODO: fix mypy xd no comments)
 
 
 async def on_startup(bot: Bot) -> None:
@@ -71,10 +83,11 @@ async def on_startup(bot: Bot) -> None:
     await bot.set_webhook(f'{WEBHOOK_URL}')
 
 
-def main(bot: Bot) -> None:
+def main(bot: Bot, args: argparse.Namespace) -> None:
     dp = Dispatcher()
-    init_handlers(dp, bot)
+    init_handlers(dp, bot, args)
     dp.startup.register(on_startup) # register webhook
+    # TODO: delete webhook on shutdown
 
     app = web.Application()
 
@@ -90,9 +103,9 @@ def main(bot: Bot) -> None:
     web.run_app(app, host=BACKEND_HOST, port=BACKEND_PORT)
 
 
-async def polling(bot: Bot):
+async def polling(bot: Bot, args: argparse.Namespace):
     dp = Dispatcher()
-    init_handlers(dp, bot)
+    init_handlers(dp, bot, args)
 
     await dp.start_polling(bot)
 
@@ -105,13 +118,13 @@ if __name__ == '__main__':
     parser.add_argument('api_key', type=validate_file_arg('api_key'), help='Path to the API key file.')
     parser.add_argument('quotes_file', type=validate_file_arg('quotes_file'), help='Path to the JSON file with quotes.')
 
-    args = parser.parse_args()
+    args: argparse.Namespace = parser.parse_args()
 
-    api_key = load_api_key(Path(sys.argv[-1]))
+    api_key = load_api_key(args.api_key)
 
     bot = Bot(api_key, default=DefaultBotProperties(parse_mode='MarkdownV2'))
     
     if args.polling:
-        asyncio.run(polling(bot))
+        asyncio.run(polling(bot, args))
     else:
-        main(bot)
+        main(bot, args)
