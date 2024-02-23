@@ -16,7 +16,7 @@ from aiohttp import web
 LOGGER = logging.getLogger('application')
 
 WEBHOOK_PATH = '/bot'
-WEBHOOK_URL = 'https://ltgmc.online/{WEBHOOK_PATH}'
+WEBHOOK_URL = f'https://ltgmc.online{WEBHOOK_PATH}'
 
 BACKEND_HOST = '0.0.0.0'
 BACKEND_PORT = 80
