@@ -10,6 +10,9 @@ up:
 down:
 	docker compose down
 
+logs:
+	docker compose logs -f
+
 rebuild: down build up
 
 .PHONY: build up down rebuild
