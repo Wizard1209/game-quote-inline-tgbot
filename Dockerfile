@@ -1,7 +1,7 @@
 FROM python:3.12-alpine
 
 WORKDIR /app
-RUN useradd -m app && chown -R app:app /app
+RUN adduser -D app && chown -R app:app /app
 USER app
 
 COPY pyproject.toml /app/.
