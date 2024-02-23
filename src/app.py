@@ -42,6 +42,7 @@ def init_handlers(dp: Dispatcher, bot: Bot):
 
 
 async def on_startup(bot: Bot) -> None:
+    LOGGER.info(f'Registering webhook: {WEBHOOK_URL}')
     await bot.set_webhook(f'{WEBHOOK_URL}')
 
 
