@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A list of quotes for game quote bot",
+    "items": {
+        "additionalProperties": false,
+        "properties": {
+            "hero": {
+                "description": "Hero",
+                "type": "string"
+            },
+            "lang": {
+                "description": "Language",
+                "type": "string"
+            },
+            "lyrics": {
+                "description": "Lyrics",
+                "type": "string"
+            },
+            "url": {
+                "description": "URL to mp3",
+                "format": "uri",
+                "type": "string"
+            }
+        },
+        "required": [
+            "hero",
+            "url",
+            "lang",
+            "lyrics"
+        ],
+        "type": "object"
+    },
+    "title": "QuotesList",
+    "type": "array"
+}

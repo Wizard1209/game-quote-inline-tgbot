@@ -1,7 +1,10 @@
+import argparse
 import asyncio
+import json
 from pathlib import Path
 import sys
 import logging
+from typing import Callable, TypedDict
 
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
@@ -22,10 +25,32 @@ BACKEND_HOST = '0.0.0.0'
 BACKEND_PORT = 80
 
 
-def load_api_key(api_key_path: Path):
-    if not api_key_path.exists():
-        raise FileNotFoundError('API key path does not exist')
+class QuoteInfo(TypedDict):
+    hero: str
+    url: str
+    lang: str
+    lyrics: str
 
+
+def read_quotes_file(file_path: str) -> list[QuoteInfo]:
+    with open(file_path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    return data
+
+
+def validate_file_arg(arg_name: str) -> Callable[[str], Path]:
+    def valid_file(path_str: str) -> Path:
+        if not path_str:
+            raise argparse.ArgumentTypeError(f'{arg_name} path not specified')
+        path = Path(path_str)
+        if not path.exists():
+            raise argparse.ArgumentTypeError(f'The file "{path}" does not exist.')
+        return path
+    
+    return valid_file
+
+
+def load_api_key(api_key_path: Path):
     return api_key_path.read_text().strip()
 
 
@@ -63,14 +88,30 @@ def main(bot: Bot) -> None:
     setup_application(app, dp, bot=bot)
 
     web.run_app(app, host=BACKEND_HOST, port=BACKEND_PORT)
-    # await dp.start_polling(bot)
+
+
+async def polling(bot: Bot):
+    dp = Dispatcher()
+    init_handlers(dp, bot)
+
+    await dp.start_polling(bot)
 
 
 if __name__ == '__main__':
-    # TODO: add flag for selecting polling or webhook
     logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
-    if len(sys.argv) < 2:
-        raise RuntimeError('Path for API key was not provided')
-    api_key = load_api_key(Path(sys.argv[1]))
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-p', '--polling', action='store_true', help='Enable polling mode.')
+    parser.add_argument('api_key', type=validate_file_arg('api_key'), help='Path to the API key file.')
+    parser.add_argument('quotes_file', type=validate_file_arg('quotes_file'), help='Path to the JSON file with quotes.')
+
+    args = parser.parse_args()
+
+    api_key = load_api_key(Path(sys.argv[-1]))
+
     bot = Bot(api_key, default=DefaultBotProperties(parse_mode='MarkdownV2'))
-    main(bot)
+    
+    if args.polling:
+        asyncio.run(polling(bot))
+    else:
+        main(bot)

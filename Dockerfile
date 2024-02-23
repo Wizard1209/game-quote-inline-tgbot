@@ -7,4 +7,4 @@ USER app
 COPY pyproject.toml /app/.
 RUN pip install .
 
-CMD ["python", "src/app.py", "/app/api_key.txt"]
+CMD ["python", "src/app.py"]
