@@ -1,14 +1,194 @@
 [
     {
         "hero": "Slark",
-        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/c0/Slark_rival_03_ru.mp3/revision/latest?cb=20170413151822",
         "lang": "ru",
-        "lyrics": "Naga Siren minimap icon: Я тебя не слышу."
+        "lyrics": "Naga Siren minimap icon: Я тебя не слышу.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/c0/Slark_rival_03_ru.mp3/revision/latest?cb=20170413151822"
     },
     {
         "hero": "Clockwerk",
-        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/0/0f/Ratt_level_13_ru.mp3/revision/latest?cb=20170409121101",
         "lang": "ru",
-        "lyrics": "Всех раскручу, ха-ха!"
+        "lyrics": "Всех раскручу, ха-ха!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/0/0f/Ratt_level_13_ru.mp3/revision/latest?cb=20170409121101"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Давай же, больно не будет.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/38/Slark_attack_01_ru.mp3/revision/latest?cb=20170413152157"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Свобода любой ценой.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/20/Slark_attack_06_ru.mp3/revision/latest?cb=20170413145913"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Slark положил на тебя глаз.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/cf/Slark_cast_01_ru.mp3/revision/latest?cb=20170413150024"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Faceless Void.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/78/Vo_faceless_void_fv_arc_spawn_01.mp3/revision/latest?cb=20220925094736"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Foreseen is forearmed.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/72/Vo_faceless_void_fv_arc_move_12.mp3/revision/latest?cb=20220925082253"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Gold is forever.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f4/Vo_faceless_void_fv_arc_lasthit_01.mp3/revision/latest?cb=20220925073033"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Like the sun, I rise again.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e3/Vo_faceless_void_fv_arc_respawn_01.mp3/revision/latest?cb=20220925084703"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Давай же, больно не будет.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/38/Slark_attack_01_ru.mp3/revision/latest?cb=20170413152157"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Свобода любой ценой.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/20/Slark_attack_06_ru.mp3/revision/latest?cb=20170413145913"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Slark положил на тебя глаз.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/cf/Slark_cast_01_ru.mp3/revision/latest?cb=20170413150024"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Faceless Void.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/78/Vo_faceless_void_fv_arc_spawn_01.mp3/revision/latest?cb=20220925094736"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Foreseen is forearmed.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/72/Vo_faceless_void_fv_arc_move_12.mp3/revision/latest?cb=20220925082253"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Gold is forever.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f4/Vo_faceless_void_fv_arc_lasthit_01.mp3/revision/latest?cb=20220925073033"
+    },
+    {
+        "hero": "Faceless Void",
+        "lang": "en",
+        "lyrics": "Like the sun, I rise again.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e3/Vo_faceless_void_fv_arc_respawn_01.mp3/revision/latest?cb=20220925084703"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Aegis of the Immortal В чём подвох?",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/7/70/Slark_immort_02_ru.mp3/revision/latest?cb=20170413150559"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "Ох, какой же я заводной.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/0/09/Ratt_spawn_04_ru.mp3/revision/latest?cb=20170409122001"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "Поскрипели!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/6/6c/Ratt_move_18_ru.mp3/revision/latest?cb=20170409121350"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "Ладно смазан.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/8/83/Ratt_move_25_ru.mp3/revision/latest?cb=20170409121426"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "Пружинистой походкой.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/24/Ratt_move_16_ru.mp3/revision/latest?cb=20170409121337"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "В гонке побеждает черепаха.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/d/dd/Ratt_move_24_ru.mp3/revision/latest?cb=20170409121421"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "Нам, коротышам, нужно держаться вместе, да, Sniper?",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/9/90/Ratt_cuz_12_ru.mp3/revision/latest?cb=20170409120155"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "Эх...жизнь моя жестянка.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/f/fa/Ratt_death_05_ru.mp3/revision/latest?cb=20170409120325"
+    },
+    {
+        "hero": "Kunkka",
+        "lang": "ru",
+        "lyrics": "А ну рты не разевать - адмирал на борту!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/a/aa/Kunk_spawn_05_ru.mp3/revision/latest?cb=20170409134606"
+    },
+    {
+        "hero": "Kunkka",
+        "lang": "ru",
+        "lyrics": "Отправляйся прямиком на дно!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/7/7a/Kunk_kill_04_ru.mp3/revision/latest?cb=20170409133352"
+    },
+    {
+        "hero": "Kunkka",
+        "lang": "ru",
+        "lyrics": "Ну здравствуй, малёк.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/e/ee/Kunk_ally_02_ru.mp3/revision/latest?cb=20170409132509"
+    },
+    {
+        "hero": "Kunkka",
+        "lang": "ru",
+        "lyrics": "Тебя бы я взял в далёкое плавание!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/7/78/Kunk_thanks_03_ru.mp3/revision/latest?cb=20170409134654"
+    },
+    {
+        "hero": "Ursa",
+        "lang": "ru",
+        "lyrics": "Опыт - сладкий словно мёд.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/4/45/Ursa_levelup_07_ru.mp3/revision/latest?cb=20170413182046"
+    },
+    {
+        "hero": "Ursa",
+        "lang": "ru",
+        "lyrics": "Вся мощь медвежьего рода горит во мне вечным пламенем.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/8/8c/Ursa_immort_02_ru.mp3/revision/latest?cb=20170413181512"
+    },
+    {
+        "hero": "Ursa",
+        "lang": "ru",
+        "lyrics": "Умоляю, детёнышей не трожь.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/6/62/Ursa_death_18_ru.mp3/revision/latest?cb=20170413181003"
+    },
+    {
+        "hero": "Ursa",
+        "lang": "ru",
+        "lyrics": "Ты моих медвежат не тревожь.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/5/5b/Ursa_spawn_03_ru.mp3/revision/latest?cb=20170413183227"
     }
 ]
