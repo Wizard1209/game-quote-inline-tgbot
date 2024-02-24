@@ -73,7 +73,8 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace):
                 results.append(InlineQueryResultAudio(
                     id=str(uuid.uuid4()),
                     audio_url=q['url'],
-                    title=q['hero']
+                    title=q['lyrics'],
+                    performer=q['hero']
                 ))
         await message.answer(list(results))  # TODO: fix mypy xd no comments)
 
