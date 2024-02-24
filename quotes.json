@@ -56,48 +56,6 @@
     {
         "hero": "Slark",
         "lang": "ru",
-        "lyrics": "Давай же, больно не будет.",
-        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/38/Slark_attack_01_ru.mp3/revision/latest?cb=20170413152157"
-    },
-    {
-        "hero": "Slark",
-        "lang": "ru",
-        "lyrics": "Свобода любой ценой.",
-        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/20/Slark_attack_06_ru.mp3/revision/latest?cb=20170413145913"
-    },
-    {
-        "hero": "Slark",
-        "lang": "ru",
-        "lyrics": "Slark положил на тебя глаз.",
-        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/cf/Slark_cast_01_ru.mp3/revision/latest?cb=20170413150024"
-    },
-    {
-        "hero": "Faceless Void",
-        "lang": "en",
-        "lyrics": "Faceless Void.",
-        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/78/Vo_faceless_void_fv_arc_spawn_01.mp3/revision/latest?cb=20220925094736"
-    },
-    {
-        "hero": "Faceless Void",
-        "lang": "en",
-        "lyrics": "Foreseen is forearmed.",
-        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/72/Vo_faceless_void_fv_arc_move_12.mp3/revision/latest?cb=20220925082253"
-    },
-    {
-        "hero": "Faceless Void",
-        "lang": "en",
-        "lyrics": "Gold is forever.",
-        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f4/Vo_faceless_void_fv_arc_lasthit_01.mp3/revision/latest?cb=20220925073033"
-    },
-    {
-        "hero": "Faceless Void",
-        "lang": "en",
-        "lyrics": "Like the sun, I rise again.",
-        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e3/Vo_faceless_void_fv_arc_respawn_01.mp3/revision/latest?cb=20220925084703"
-    },
-    {
-        "hero": "Slark",
-        "lang": "ru",
         "lyrics": "Aegis of the Immortal В чём подвох?",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/7/70/Slark_immort_02_ru.mp3/revision/latest?cb=20170413150559"
     },
