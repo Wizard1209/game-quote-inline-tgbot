@@ -1,22 +1,22 @@
 import argparse
 import asyncio
 import json
-from pathlib import Path
-import sys
 import logging
-from typing import Callable, TypedDict
+import sys
 import uuid
+from pathlib import Path
+from typing import Callable, TypedDict
 
 from aiogram import Bot, Dispatcher
+from aiogram.client.default import DefaultBotProperties
+from aiogram.client.session.middlewares.request_logging import RequestLogging
 from aiogram.types import Message
 from aiogram.types.inline_query import InlineQuery
 from aiogram.types.inline_query_result_audio import InlineQueryResultAudio
 from aiogram.utils.markdown import bold
-from aiogram.client.default import DefaultBotProperties
-from aiogram.client.session.middlewares.request_logging import RequestLogging
-from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
+from aiogram.webhook.aiohttp_server import (SimpleRequestHandler,
+                                            setup_application)
 from aiohttp import web
-
 
 LOGGER = logging.getLogger('application')
 
