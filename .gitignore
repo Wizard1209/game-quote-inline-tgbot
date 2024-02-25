@@ -157,3 +157,6 @@ api_key.txt
 
 # ruff linter
 .ruff_cache
+
+# nix build
+result
