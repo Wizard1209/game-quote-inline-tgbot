@@ -154,3 +154,6 @@ dmypy.json
 cython_debug/
 
 api_key.txt
+
+# ruff linter
+.ruff_cache
