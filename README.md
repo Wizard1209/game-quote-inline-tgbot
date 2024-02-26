@@ -16,6 +16,6 @@ Follow these steps to set up JSON schema validation in VSCode for contributing t
             "*quotes.json"
         ],
         "url": "https://raw.githubusercontent.com/Wizard1209/game-quote-inline-tgbot/main/quotes_schema.json"
-    }
+    },
 ]
 ```
