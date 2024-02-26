@@ -148,5 +148,29 @@
         "lang": "ru",
         "lyrics": "Ты моих медвежат не тревожь.",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/5/5b/Ursa_spawn_03_ru.mp3/revision/latest?cb=20170413183227"
+    },
+    {
+        "hero": "Juggernaut",
+        "lang": "ru",
+        "lyrics": "Жаль не взял собой рундук. Хе-хе. Сундук для рун - рундук.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/5/55/Jug_bottle_03_ru.mp3/revision/latest?cb=20170409131650"
+    },
+    {
+        "hero": "Gyrocopter",
+        "lang": "ru",
+        "lyrics": "Прибавка к пенсии.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/e/e5/Gyro_lasthit_09_ru.mp3/revision/latest?cb=20170412211210"
+    },
+    {
+        "hero": "Earthshaker",
+        "lang": "ru",
+        "lyrics": "Сейчас начнётся тряска.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/cc/Erth_move_06_ru.mp3/revision/latest?cb=20170412202650"
+    },
+    {
+        "hero": "Earthshaker",
+        "lang": "ru",
+        "lyrics": "Ох… до сих пор трясёт…",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/6/65/Erth_respawn_06_ru.mp3/revision/latest?cb=20170412203036"
     }
 ]
