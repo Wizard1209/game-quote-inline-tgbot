@@ -22,4 +22,10 @@ lint = ["ruff>=0.2.2"]
 [tool.ruff.lint]
 select = ["E", "F"]
 
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+indent-style = "tab"
+
 [tool.ruff.lint.isort]
