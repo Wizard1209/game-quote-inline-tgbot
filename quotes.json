@@ -172,5 +172,83 @@
         "lang": "ru",
         "lyrics": "Ох… до сих пор трясёт…",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/6/65/Erth_respawn_06_ru.mp3/revision/latest?cb=20170412203036"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Мою жажду знаний невозможно утолить.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/e/e1/Rubick_spawn_01_ru.mp3/revision/latest?cb=20170413141806"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Ощути мои знания!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/9/97/Rubick_attack_13_ru.mp3/revision/latest?cb=20170413135451"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " подражать можно кому угодно",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/1/1a/Rubick_spellsteal_14_ru.mp3/revision/latest?cb=20170413141942"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " В грязь лицом!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/23/Rubick_telekinesis_down_04_ru.mp3/revision/latest?cb=20170413142042"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Куда же пойти потом? Университет Ультимира? Йама Раскав? Хм-м.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/b/b8/Rubick_rare_01_ru.mp3/revision/latest?cb=20170413141459"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Так это была смерть? Интересно.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/4/4d/Rubick_respawn_03_ru.mp3/revision/latest?cb=20170413141534"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Aghanim's Scepter (4200) п Как давно я его не держал.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/e/ef/Rubick_scepter_03_ru.mp3/revision/latest?cb=20170413141756"
+    },
+    {
+        "hero": "Silencer",
+        "lang": "en",
+        "lyrics": "Global Silence",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/14/Silencer_Global_Silence_1.mp3/revision/latest?cb=20191216023205"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Silencer minimap icon Я заставлю тебя замолчать…навсегда.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/27/Rubick_rival_05_ru.mp3/revision/latest?cb=20170413141635"
+    },
+    {
+        "hero": "Wraigh King",
+        "lang": "ru",
+        "lyrics": " Пора помочь хлипким и ничтожным союзникам.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/7/7e/Wraith_ally_01_ru.mp3/revision/latest?cb=20170413190601"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Doom ability icon Doom!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/7/78/Rubick_castsstolenspell_36_ru.mp3/revision/latest?cb=20170413135848"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Так, какие можно сделать выводы? Хм-м.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/e/e5/Rubick_respawn_04_ru.mp3/revision/latest?cb=20170413141539"
+    },
+    {
+        "hero": "Rubick",
+        "lang": "ru",
+        "lyrics": " Я не краду: я беру взаймы.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/9/93/Rubick_spellsteal_13_ru.mp3/revision/latest?cb=20170413141937"
     }
 ]
