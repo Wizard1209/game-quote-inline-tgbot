@@ -13,6 +13,9 @@ down:
 logs:
 	docker compose logs -f
 
-r: down up
+pull:
+	git pull
+
+r: pull down up
 
 .PHONY: polling build up down logs r
