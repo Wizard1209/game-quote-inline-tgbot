@@ -9,6 +9,7 @@ from typing import Callable, TypedDict
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
+from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.types.inline_query import InlineQuery
 from aiogram.types.inline_query_result_audio import InlineQueryResultAudio
@@ -49,14 +50,17 @@ def validate_file_arg(arg_name: str) -> Callable[[str], Path]:
 def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace):
     quotes_data: list[QuoteInfo] = read_quotes_file(args.quotes_file)
 
-    @dp.message()
+    @dp.message(CommandStart())
     async def command_start_handler(message: Message) -> None:
         user_name = getattr(message.from_user, "full_name", "noname")
         greetings = f"Hello, {bold(user_name)}"
-        # why we need log user message?
-        LOGGER.debug(f"Message from: {user_name}")
 
         await message.answer(greetings)
+
+    @dp.message()
+    async def message_handler(message: Message) -> None:
+        for admin_id in CONFIG.admin_ids:
+            await message.forward(chat_id=admin_id)
 
     @dp.inline_query()
     async def inline_query(message: InlineQuery) -> None:
