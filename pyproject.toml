@@ -17,7 +17,7 @@ lint = "ruff ."
 fmt = "ruff format ."
 
 [tool.pdm.dev-dependencies]
-lint = ["ruff>=0.2.2"]
+lint = ["ruff>=0.2.2", "mypy>=1.8.0"]
 
 [tool.ruff.lint]
 select = ["E", "F"]
@@ -29,3 +29,6 @@ line-length = 100
 indent-style = "tab"
 
 [tool.ruff.lint.isort]
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
