@@ -3,7 +3,7 @@ name = "game-quote-inline-tgbot"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [{ name = "Wizard1209", email = "wizard1209@pm.me" }]
-dependencies = ["aiogram>=3.4.1"]
+dependencies = ["aiogram>=3.4.1", "pydantic-settings>=2.2.1"]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = { text = "MIT" }
