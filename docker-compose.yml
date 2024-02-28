@@ -7,11 +7,11 @@ services:
     image: game_quote_bot_image:latest
     volumes:
       - ./src:/app/src
-      - ./api_key.txt:/app/api_key.txt
+      - ./.env:/app/.env
       - ./quotes.json:/app/quotes.json
     expose:
       - 80
-    command: ["python", "src/app.py", "api_key.txt", "quotes.json"]
+    command: ["python", "src/app.py", "quotes.json"]
     labels:
       - traefik.enable=true
       - "traefik.http.routers.game_quote_bot.rule=Host(`ltgmc.online`) && PathPrefix(`/bot`)"
