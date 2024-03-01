@@ -19,7 +19,7 @@ class Config(BaseSettings):
 
     admin_ids: str | list[str] = Field(validate_default=True)
 
-    @validator("admin_ids", pre=True)
+    @validator("admin_ids")
     def split_ids(cls, ids: str) -> list[str]:
         return ids.split(",")
 
