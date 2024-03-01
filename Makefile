@@ -16,6 +16,6 @@ logs:
 pull:
 	git pull
 
-r: pull down up
+r: pull build down up
 
 .PHONY: polling build up down logs r
