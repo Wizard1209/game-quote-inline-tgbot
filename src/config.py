@@ -21,4 +21,4 @@ class Config(BaseSettings):
 
     @property
     def webhook_url(self) -> str:
-        return f"{self.webhook_host}/{self.webhook_path}"
+        return f"https://{self.webhook_host}/{self.webhook_path}"
