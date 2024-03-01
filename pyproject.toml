@@ -1,7 +1,7 @@
 [project]
 name = "game-quote-inline-tgbot"
-version = "0.1.0"
-description = "Default template for PDM package"
+version = "0.2.0"
+description = "Telegram bot for audio/voice quotes"
 authors = [{ name = "Wizard1209", email = "wizard1209@pm.me" }]
 dependencies = ["aiogram>=3.4.1", "pydantic-settings>=2.2.1"]
 requires-python = "==3.12.*"
@@ -9,6 +9,10 @@ readme = "README.md"
 license = { text = "MIT" }
 
 
+[project.optional-dependencies]
+lint = [
+    "ruff>=0.2.2",
+]
 [tool.pdm]
 distribution = false
 
@@ -17,7 +21,9 @@ lint = "ruff ."
 fmt = "ruff format ."
 
 [tool.pdm.dev-dependencies]
-lint = ["ruff>=0.2.2", "mypy>=1.8.0"]
+dev = [
+    "mypy>=1.8.0",
+]
 
 [tool.ruff.lint]
 select = ["E", "F"]
@@ -27,8 +33,6 @@ line-length = 100
 
 [tool.ruff.format]
 indent-style = "space"
-
-[tool.ruff.lint.isort]
 
 [tool.mypy]
 plugins = ["pydantic.mypy"]

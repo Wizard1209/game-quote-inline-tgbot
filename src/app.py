@@ -98,6 +98,7 @@ def main(bot: Bot, args: argparse.Namespace) -> None:
     dp = Dispatcher()
     init_handlers(dp, bot, args)
     dp.startup.register(on_startup)  # register webhook
+    dp.shutdown.register(bot.delete_webhook)
     # TODO: delete webhook on shutdown
 
     app = web.Application()
