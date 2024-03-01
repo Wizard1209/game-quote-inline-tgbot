@@ -17,7 +17,7 @@ lint = [
 distribution = false
 
 [tool.pdm.scripts]
-lint = "ruff ."
+lint = "ruff check ."
 fmt = "ruff format ."
 
 [tool.pdm.dev-dependencies]
