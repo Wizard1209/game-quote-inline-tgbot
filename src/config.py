@@ -1,9 +1,13 @@
+from pathlib import Path
 from pydantic import Field, validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Config(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+    if Path(".env").exists():
+        model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+    else:
+        model_config = SettingsConfigDict()
 
     bot_token: str = Field(validate_default=True)
 

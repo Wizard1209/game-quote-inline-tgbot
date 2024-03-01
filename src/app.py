@@ -31,7 +31,7 @@ class QuoteInfo(TypedDict):
 
 def read_quotes_file(file_path: str) -> list[QuoteInfo]:
     with open(file_path, "r", encoding="utf-8") as file:
-        data = json.load(file)
+        data: list[QuoteInfo] = json.load(file)
     return data
 
 
@@ -47,7 +47,7 @@ def validate_file_arg(arg_name: str) -> Callable[[str], Path]:
     return valid_file
 
 
-def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace):
+def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace) -> None:
     quotes_data: list[QuoteInfo] = read_quotes_file(args.quotes_file)
 
     @dp.message(CommandStart())
@@ -112,7 +112,7 @@ def main(bot: Bot, args: argparse.Namespace) -> None:
     web.run_app(app, host=CONFIG.backend_host, port=CONFIG.backend_port)
 
 
-async def polling(bot: Bot, args: argparse.Namespace):
+async def polling(bot: Bot, args: argparse.Namespace) -> None:
     dp = Dispatcher()
     init_handlers(dp, bot, args)
 

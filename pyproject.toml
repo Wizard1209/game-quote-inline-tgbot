@@ -8,20 +8,18 @@ requires-python = "==3.12.*"
 readme = "README.md"
 license = { text = "MIT" }
 
-
-[project.optional-dependencies]
-lint = [
-    "ruff>=0.2.2",
-]
 [tool.pdm]
 distribution = false
 
 [tool.pdm.scripts]
-lint = "ruff check ."
 fmt = "ruff format ."
+lint = "ruff check ."
+types = "mypy ."
+all = {composite = ["fmt", "lint", "types"]}
 
 [tool.pdm.dev-dependencies]
 dev = [
+    "ruff>=0.2.2",
     "mypy>=1.8.0",
 ]
 
@@ -36,3 +34,5 @@ indent-style = "space"
 
 [tool.mypy]
 plugins = ["pydantic.mypy"]
+python_version = "3.12"
+strict = true

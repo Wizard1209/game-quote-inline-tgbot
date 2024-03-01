@@ -7,7 +7,6 @@ services:
     image: game_quote_bot_image:latest
     volumes:
       - ./src:/app/src
-      - ./.env:/app/.env
       - ./quotes.json:/app/quotes.json
     expose:
       - 80
