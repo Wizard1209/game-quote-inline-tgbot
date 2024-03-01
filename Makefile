@@ -1,5 +1,5 @@
 polling:
-	python src/app.py -p api_key.txt quotes.json
+	python src/app.py -p quotes.json
 
 build:
 	docker compose build

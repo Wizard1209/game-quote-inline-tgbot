@@ -153,10 +153,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-api_key.txt
-
 # ruff linter
 .ruff_cache
-
-# nix build
-result

@@ -9,21 +9,17 @@ from typing import Callable, TypedDict
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
-from aiogram.client.session.middlewares.request_logging import RequestLogging
+from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.types.inline_query import InlineQuery
 from aiogram.types.inline_query_result_audio import InlineQueryResultAudio
 from aiogram.utils.markdown import bold
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
+from config import Config
 
 LOGGER = logging.getLogger("application")
-
-WEBHOOK_PATH = "/bot"
-WEBHOOK_URL = f"https://ltgmc.online{WEBHOOK_PATH}"
-
-BACKEND_HOST = "0.0.0.0"
-BACKEND_PORT = 80
+CONFIG = Config()
 
 
 class QuoteInfo(TypedDict):
@@ -51,27 +47,26 @@ def validate_file_arg(arg_name: str) -> Callable[[str], Path]:
     return valid_file
 
 
-def load_api_key(api_key_path: Path):
-    return api_key_path.read_text().strip()
-
-
 def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace):
     quotes_data: list[QuoteInfo] = read_quotes_file(args.quotes_file)
 
-    @dp.message()
+    @dp.message(CommandStart())
     async def command_start_handler(message: Message) -> None:
-        LOGGER.debug(
-            f"Message: {getattr(message.from_user, 'full_name', 'noname')} - {message.text or message.content_type if len(message.text or message.content_type) < 15 else 'Long message'}"
-        )
-        await message.answer(
-            f'Hello, {bold(getattr(message.from_user, "full_name", "noname"))}\\!'
-        )
+        user_name = getattr(message.from_user, "full_name", "noname")
+        greetings = f"Hello, {bold(user_name)}"
+
+        await message.answer(greetings)
+
+    @dp.message()
+    async def message_handler(message: Message) -> None:
+        for admin_id in CONFIG.admin_ids:
+            await message.forward(chat_id=admin_id)
 
     @dp.inline_query()
     async def inline_query(message: InlineQuery) -> None:
-        LOGGER.debug(
-            f"Inline: {message.from_user.full_name} - {message.query if len(message.query) < 15 else 'Long query'}"
-        )
+        user_name = getattr(message.from_user, "full_name", "noname")
+        LOGGER.debug(f"Inline from: {user_name}")
+
         results: list[InlineQueryResultAudio] = []
         for q in quotes_data:
             if (
@@ -95,8 +90,8 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace):
 
 
 async def on_startup(bot: Bot) -> None:
-    LOGGER.info(f"Registering webhook: {WEBHOOK_URL}")
-    await bot.set_webhook(f"{WEBHOOK_URL}")
+    LOGGER.info(f"Registering webhook: {CONFIG.webhook_url}")
+    await bot.set_webhook(f"{CONFIG.webhook_url}")
 
 
 def main(bot: Bot, args: argparse.Namespace) -> None:
@@ -109,11 +104,11 @@ def main(bot: Bot, args: argparse.Namespace) -> None:
 
     webhook_requests_handler = SimpleRequestHandler(dispatcher=dp, bot=bot)
     # Register webhook handler on application
-    webhook_requests_handler.register(app, path=WEBHOOK_PATH)
+    webhook_requests_handler.register(app, path=CONFIG.webhook_path)
     # Mount dispatcher startup and shutdown hooks to aiohttp application
     setup_application(app, dp, bot=bot)
 
-    web.run_app(app, host=BACKEND_HOST, port=BACKEND_PORT)
+    web.run_app(app, host=CONFIG.backend_host, port=CONFIG.backend_port)
 
 
 async def polling(bot: Bot, args: argparse.Namespace):
@@ -127,12 +122,8 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-p", "--polling", action="store_true", help="Enable polling mode."
-    )
-    parser.add_argument(
-        "api_key", type=validate_file_arg("api_key"), help="Path to the API key file."
-    )
+    parser.add_argument("-p", "--polling", action="store_true", help="Enable polling mode.")
+
     parser.add_argument(
         "quotes_file",
         type=validate_file_arg("quotes_file"),
@@ -141,9 +132,7 @@ if __name__ == "__main__":
 
     args: argparse.Namespace = parser.parse_args()
 
-    api_key = load_api_key(args.api_key)
-
-    bot = Bot(api_key, default=DefaultBotProperties(parse_mode="MarkdownV2"))
+    bot = Bot(CONFIG.bot_token, default=DefaultBotProperties(parse_mode="MarkdownV2"))
 
     if args.polling:
         asyncio.run(polling(bot, args))
