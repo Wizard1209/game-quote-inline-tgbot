@@ -1,5 +1,6 @@
 from pathlib import Path
-from pydantic import Field, validator
+from typing import Any
+from pydantic import Field, ValidationError, validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -17,11 +18,18 @@ class Config(BaseSettings):
     backend_host: str = Field(validate_default=True)
     backend_port: int = Field(validate_default=True)
 
-    admin_ids: str | list[str] = Field(validate_default=True)
+    admin_ids: list[int] = Field(validate_default=True)
 
-    @validator("admin_ids")
-    def split_ids(cls, ids: str) -> list[str]:
-        return ids.split(",")
+    @validator("admin_ids", pre=True)
+    def split_ids(cls, ids: Any) -> list[int]:
+        if isinstance(ids, int):
+            return [ids]
+        elif isinstance(ids, str):
+            return list(map(int, ids.split(",")))
+        else:
+            raise ValidationError(
+                f"admin_ids must be an int or comma separated list of ints, instead of {type(ids)}"
+            )
 
     @property
     def webhook_url(self) -> str:
