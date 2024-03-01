@@ -12,7 +12,7 @@ services:
       - 80
     command: ["python", "src/app.py", "quotes.json"]
     env_file:
-      - path: .env
+      - .env
     labels:
       - traefik.enable=true
       - "traefik.http.routers.game_quote_bot.rule=Host(`${WEBHOOK_HOST}`) && PathPrefix(`/${WEBHOOK_PATH}`)"
