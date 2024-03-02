@@ -1,5 +1,5 @@
 polling:
-	python src/app.py -p quotes.json
+	python quotebot/main.py -p quotes.json
 
 build:
 	docker compose build

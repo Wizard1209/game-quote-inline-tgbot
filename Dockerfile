@@ -7,4 +7,4 @@ USER app
 COPY pyproject.toml /app/.
 RUN pip install .
 
-CMD ["python", "src/app.py"]
+CMD ["python", "quotebot/main.py"]

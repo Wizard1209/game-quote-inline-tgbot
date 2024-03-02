@@ -6,11 +6,11 @@ services:
       dockerfile: Dockerfile
     image: game_quote_bot_image:latest
     volumes:
-      - ./src:/app/src
+      - ./quotebot:/app/quotebot
       - ./quotes.json:/app/quotes.json
     expose:
       - 80
-    command: ["python", "src/app.py", "quotes.json"]
+    command: ["python", "quotebot/main.py", "quotes.json"]
     env_file:
       - .env
     labels:
