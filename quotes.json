@@ -262,5 +262,23 @@
         "lang": "ru",
         "lyrics": "Соберитесь, силы мои!",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/cc/Skg_level_04_ru.mp3/revision/latest?cb=20170409152351"
+    },
+    {
+        "hero": "Disruptor",
+        "lang": "ru",
+        "lyrics": "Мой путь лежит из Нагорий Друуда.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/33/Dis_move_10_ru.mp3/revision/latest?cb=20170412180014"
+    },
+    {
+        "hero": "Disruptor",
+        "lang": "ru",
+        "lyrics": "Животных в загон!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/a/a4/Dis_kineticfield_03_ru.mp3/revision/latest?cb=20170412175617"
+    },
+    {
+        "hero": "Disruptor",
+        "lang": "ru",
+        "lyrics": "Похороните меня в родных степях.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/35/Dis_death_06_ru.mp3/revision/latest?cb=20170412174813"
     }
 ]
