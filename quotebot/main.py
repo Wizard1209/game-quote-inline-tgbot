@@ -1,11 +1,12 @@
 import argparse
 import asyncio
+from collections.abc import Iterable, Sequence
 import json
 import logging
 import sys
 import uuid
 from pathlib import Path
-from typing import Callable, TypedDict
+from typing import Callable, TypedDict, cast
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
@@ -16,7 +17,7 @@ from aiogram.types.inline_query_result_audio import InlineQueryResultAudio
 from aiogram.utils.markdown import bold
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
-from config import Config
+from .config import Config
 
 LOGGER = logging.getLogger("application")
 CONFIG = Config()
@@ -59,6 +60,8 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace) -> None:
 
     @dp.message()
     async def message_handler(message: Message) -> None:
+        if not CONFIG.admin_ids:
+            return
         for admin_id in CONFIG.admin_ids:
             await message.forward(chat_id=admin_id)
 
@@ -69,6 +72,8 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace) -> None:
 
         results: list[InlineQueryResultAudio] = []
         for q in quotes_data:
+            if len(results) >= 50:
+                break
             if (
                 message.query.lower() in q["hero"].lower()
                 or message.query.lower() in q["lyrics"].lower()
@@ -81,7 +86,7 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace) -> None:
                         performer=q["hero"],
                     )
                 )
-        await message.answer(list(results))  # TODO: fix mypy xd no comments)
+        await message.answer(list(results[:50]))
 
     # TODO: save user choose
     # @dp.chosen_inline_result()
@@ -104,6 +109,8 @@ def main(bot: Bot, args: argparse.Namespace) -> None:
 
     webhook_requests_handler = SimpleRequestHandler(dispatcher=dp, bot=bot)
     # Register webhook handler on application
+    if not CONFIG.webhook_path:
+        raise RuntimeError("webhook_path must be specified")
     webhook_requests_handler.register(app, path=CONFIG.webhook_path)
     # Mount dispatcher startup and shutdown hooks to aiohttp application
     setup_application(app, dp, bot=bot)
