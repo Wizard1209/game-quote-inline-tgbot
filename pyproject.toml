@@ -14,7 +14,7 @@ distribution = false
 [tool.pdm.scripts]
 fmt = "ruff format ."
 lint = "ruff check ."
-types = "mypy ."
+types = "mypy --strict quotebot"
 all = {composite = ["fmt", "lint", "types"]}
 
 [tool.pdm.dev-dependencies]

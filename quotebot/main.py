@@ -1,12 +1,11 @@
 import argparse
 import asyncio
-from collections.abc import Iterable, Sequence
 import json
 import logging
 import sys
 import uuid
 from pathlib import Path
-from typing import Callable, TypedDict, cast
+from typing import Callable, TypedDict
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
@@ -17,7 +16,7 @@ from aiogram.types.inline_query_result_audio import InlineQueryResultAudio
 from aiogram.utils.markdown import bold
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
-from .config import Config
+from quotebot.config import Config
 
 LOGGER = logging.getLogger("application")
 CONFIG = Config()
@@ -71,13 +70,13 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace) -> None:
         LOGGER.debug(f"Inline from: {user_name}")
 
         results: list[InlineQueryResultAudio] = []
+        query_lower = message.query.lower()
+
         for q in quotes_data:
+            # Stop processing once we have maximum results https://core.telegram.org/bots/api#answerinlinequery
             if len(results) >= 50:
                 break
-            if (
-                message.query.lower() in q["hero"].lower()
-                or message.query.lower() in q["lyrics"].lower()
-            ):
+            if query_lower in q["hero"].lower() or query_lower in q["lyrics"].lower():
                 results.append(
                     InlineQueryResultAudio(
                         id=str(uuid.uuid4()),
@@ -86,7 +85,7 @@ def init_handlers(dp: Dispatcher, bot: Bot, args: argparse.Namespace) -> None:
                         performer=q["hero"],
                     )
                 )
-        await message.answer(list(results[:50]))
+        await message.answer(list(results))
 
     # TODO: save user choose
     # @dp.chosen_inline_result()
