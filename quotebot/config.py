@@ -12,19 +12,21 @@ class Config(BaseSettings):
 
     bot_token: str = Field(validate_default=True)
 
-    # TODO: validate for webhooks, ignore for polling
-    webhook_host: Optional[str] = Field(validate_default=True)
-    webhook_path: Optional[str] = Field(validate_default=True)
-
-    backend_host: Optional[str] = Field(validate_default=True)
-    backend_port: Optional[int] = Field(validate_default=True)
-
     # TODO: support optional
-    admin_ids: Optional[list[int]] = Field(validate_default=True)
+    # TODO: validate for webhooks, ignore for polling
+    webhook_host: str = Field(validate_default=True)
+    webhook_path: str = Field(validate_default=True)
+
+    backend_host: str = Field(validate_default=True)
+    backend_port: int = Field(validate_default=True)
+
+    admin_ids: Optional[list[int]] = Field(default=None, validate_default=True)
 
     @validator("admin_ids", pre=True)
     def split_ids(cls, ids: Any) -> list[int]:
-        if isinstance(ids, int):
+        if not ids:
+            return []
+        elif isinstance(ids, int):
             return [ids]
         elif isinstance(ids, str):
             return list(map(int, ids.split(",")))

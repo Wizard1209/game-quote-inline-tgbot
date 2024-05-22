@@ -16,7 +16,7 @@ from aiogram.types.inline_query_result_audio import InlineQueryResultAudio
 from aiogram.utils.markdown import bold
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
-from quotebot.config import Config
+from config import Config
 
 LOGGER = logging.getLogger("application")
 CONFIG = Config()
