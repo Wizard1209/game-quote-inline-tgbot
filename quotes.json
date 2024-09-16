@@ -316,5 +316,64 @@
         "lang": "ru",
         "lyrics": "Я тебе башку проломлю!",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/5/5f/Bristle_attack_15_ru.mp3/revision/latest?cb=20170412153156"
+    },
+    {
+        "hero": "Bristleback",
+        "lang": "ru",
+        "lyrics": "Щас устроим бучу!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/9/95/Bristle_move_11_ru.mp3/revision/latest?cb=20170412154322"
+    },
+    {
+        "hero": "Bristleback",
+        "lang": "ru",
+        "lyrics": "Щас ещё получишь, дурила.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/f/fd/Bristle_attack_20_ru.mp3/revision/latest?cb=20170412153214"
+    },
+    {
+        "hero": "Axe",
+        "lang": "en",
+        "lyrics": "Axe attacks!","url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f2/Vo_axe_axe_attack_10.mp3/revision/latest?cb=20201009174747"
+    },
+    {
+        "hero": "Nature's Prophet",
+        "lang": "en",
+        "lyrics": "By my shaggy bark.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b1/Vo_furion_furi_move_04.mp3/revision/latest?cb=20201011150130"
+    },
+    {
+        "hero": "Slark",
+        "lang": "ru",
+        "lyrics": "Сюда, рыбка моя.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/8/8f/Slark_attack_13_ru.mp3/revision/latest?cb=20170413145946"
+    },
+    {
+        "hero": "Nature's Prophet",
+        "lang": "en",
+        "lyrics": "Here, fishy-fishy.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/0/0b/Vo_slark_slark_attack_13.mp3/revision/latest?cb=20201018202343"
+    },
+    {
+        "hero": "Clockwerk Announcer Pack",
+        "lang": "ru",
+        "lyrics": "Гайки-шестеренки!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/0/07/Dlc_clockwerk_killing_spree_announcer_kill_holy_01_ru.mp3/revision/latest?cb=20170409155625"
+    },
+    {
+        "hero": "Clockwerk",
+        "lang": "ru",
+        "lyrics": "Pudge, как тебе мой крюк?",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/22/Ratt_ability_hook_08_ru.mp3/revision/latest?cb=20170409115753"
+    },
+    {
+        "hero": "Pudge",
+        "lang": "ru",
+        "lyrics": "Пшёл с дороги!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/5/52/Pud_ability_hook_miss_06_ru.mp3/revision/latest?cb=20170413104342"
+    },
+    {
+        "hero": "Broodmother",
+        "lang": "ru",
+        "lyrics": "Иди к матери!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/5/5d/Brooo_lasthit_13_ru.mp3/revision/latest?cb=20170409120556"
     }
 ]
