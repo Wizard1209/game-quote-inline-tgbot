@@ -399,5 +399,35 @@
         "lang": "ru",
         "lyrics": "Meepo Зачем подземной крысе такая сила?",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/a/a0/Plance_rival_02_ru.mp3/revision/latest?cb=20170413101726"
+    },
+    {
+        "hero": "Alchemist",
+        "lang": "ru",
+        "lyrics": "Хватит нам работать вполсилы.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/d/d3/Alch_doubdam_02_ru.mp3/revision/latest?cb=20170402090703"
+    },
+    {
+        "hero": "Alchemist",
+        "lang": "ru",
+        "lyrics": "Как скажешь, начальник.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/c/cf/Alch_move_26_ru.mp3/revision/latest?cb=20170402093252"
+    },
+    {
+        "hero": "Alchemist",
+        "lang": "ru",
+        "lyrics": "Не тряси, а то взорвёмся!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/1/10/Alch_move_20_ru.mp3/revision/latest?cb=20170402093215"
+    },
+    {
+        "hero": "Alchemist",
+        "lang": "ru",
+        "lyrics": "Я же сказал, кидай.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/4/4b/Alch_ability_concoc_25_ru.mp3/revision/latest?cb=20170401220535"
+    },
+    {
+        "hero": "Alchemist",
+        "lang": "ru",
+        "lyrics": " Kunkka Хей, как думаешь, Kunkka заметит что я свистнул его ром?",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/5/57/Alch_rival_06_ru.mp3/revision/latest?cb=20170402094008"
     }
 ]
