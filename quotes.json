@@ -435,5 +435,59 @@
         "lang": "ru",
         "lyrics": "Увековечено в камне.",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/1/11/Earthspi_stonecaller_14_ru.mp3/revision/latest?cb=20170412191108"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Скорострел.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/0/0b/Snip_attack_04_ru.mp3/revision/latest?cb=20170413152957"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Держись, мишень.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/f/fa/Snip_attack_11_ru.mp3/revision/latest?cb=20170413153031"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Получай свинцовый завтрак!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/21/Snip_lasthit_06_ru.mp3/revision/latest?cb=20170413153703"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Тренировки окупились!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/f/f6/Snip_level_06_ru.mp3/revision/latest?cb=20170413153840"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Твоя морда просит пули.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/3f/Snip_kill_06_ru.mp3/revision/latest?cb=20170413153458"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Juggernaut Ты что ж, с ножом против пули!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/4/41/Snip_kill_blade_01_ru.mp3/revision/latest?cb=20170413153618"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Уйду из жизни... под звуки выстрелов...",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/0/0d/Snip_death_09_ru.mp3/revision/latest?cb=20170413153205"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Расстрелять!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/21/Snip_kill_01_ru.mp3/revision/latest?cb=20170413153435"
+    },
+    {
+        "hero": "Sniper",
+        "lang": "ru",
+        "lyrics": "Хм-хм-хм, палец на курке так и чешется.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/f/f1/Snip_respawn_09_ru.mp3/revision/latest?cb=20170413154611"
     }
 ]
