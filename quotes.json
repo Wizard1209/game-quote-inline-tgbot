@@ -495,5 +495,53 @@
         "lang": "ru",
         "lyrics": "Попрощайся с черепушкой!",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/1/10/Snip_tf2_04_ru.mp3/revision/latest?cb=20170413154726"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "У-ха-ха-ха-ха. Деньги могут всё.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/d/d6/Doom_lasthit_03_ru.mp3/revision/latest?cb=20170410103329"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "Приятный звон монет.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/4/4d/Doom_lasthit_06_ru.mp3/revision/latest?cb=20170410103344"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "Пламя преисподней вернуло меня к жизни.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/1/1e/Doom_respawn_04_ru.mp3/revision/latest?cb=20170410104028"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "Я открою вам врата ада.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/d/dc/Doom_respawn_09_ru.mp3/revision/latest?cb=20170410104053"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "Хо-хо-хо-хо-хо. Помяни меня - и я тут как тут, посмотри на меня - и увидишь геенну огненную!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/38/Doom_rare_01_ru.mp3/revision/latest?cb=20170410103947"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "Дьявольская победа!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/21/Doom_win_03_ru.mp3/revision/latest?cb=20170410102414"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "Doom!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/8/89/Doom_ability_doom_01_ru.mp3/revision/latest?cb=20170410102440"
+    },
+    {
+        "hero": "Doom",
+        "lang": "ru",
+        "lyrics": "Поражение.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/e/e9/Doom_lose_02_ru.mp3/revision/latest?cb=20170410103550"
     }
 ]
