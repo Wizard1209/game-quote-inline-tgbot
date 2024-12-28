@@ -561,5 +561,35 @@
         "lang": "en",
         "lyrics": "Karabos kor koramond!",
         "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/37/Vo_warlock_warl_incant_25.mp3/revision/latest?cb=20201022222021"
+    },
+    {
+        "hero": "Bounty Hunter",
+        "lang": "ru",
+        "lyrics": "Любой каприз - за ваши деньги.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/3/36/Bount_spawn_03_ru.mp3/revision/latest?cb=20170412150406"
+    },
+    {
+        "hero": "Bounty Hunter",
+        "lang": "ru",
+        "lyrics": "Кажется, тут сломанная ветка.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/6/63/Bount_move_15_ru.mp3/revision/latest?cb=20170412145757"
+    },
+    {
+        "hero": "Bounty Hunter",
+        "lang": "ru",
+        "lyrics": "Малый бизнес.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/1/1f/Bount_lasthit_10_ru.mp3/revision/latest?cb=20170412145452"
+    },
+    {
+        "hero": "Bounty Hunter",
+        "lang": "ru",
+        "lyrics": "Я все поставил на кон и… проиграл.",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/2/27/Bount_death_04_ru.mp3/revision/latest?cb=20170412144829"
+    },
+    {
+        "hero": "Bounty Hunter",
+        "lang": "ru",
+        "lyrics": "Такой силы за деньги не купишь!",
+        "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/f/f5/Bount_level_01_ru.mp3/revision/latest?cb=20170412145544"
     }
 ]
