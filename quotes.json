@@ -591,5 +591,47 @@
         "lang": "ru",
         "lyrics": "Такой силы за деньги не купишь!",
         "url": "https://static.wikia.nocookie.net/dota2_ru_gamepedia/images/f/f5/Bount_level_01_ru.mp3/revision/latest?cb=20170412145544"
+    },
+    {
+        "hero": "Bane",
+        "lang": "en",
+        "lyrics": "Bane of your existence bane of your existence bane of your existence…",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a1/Vo_bane_bane_ability_fiendsgrip_06.mp3/revision/latest?cb=20201009191405"
+    },
+    {
+        "hero": "Bane",
+        "lang": "en",
+        "lyrics": "Welcome to my nightmare!",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a1/Vo_bane_bane_kill_05.mp3/revision/latest?cb=20201009191710"
+    },
+    {
+        "hero": "Bane",
+        "lang": "en",
+        "lyrics": "Shut your eyes and dream of me.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/6/6f/Vo_bane_bane_kill_11.mp3/revision/latest?cb=20201009191721"
+    },
+    {
+        "hero": "Bane",
+        "lang": "en",
+        "lyrics": "Say goodnight!",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/3a/Vo_bane_bane_ability_nightmare_01.mp3/revision/latest?cb=20201009191408"
+    },
+    {
+        "hero": "Bane",
+        "lang": "en",
+        "lyrics": "Go to sleep…",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/9/91/Vo_bane_bane_ability_nightmare_03.mp3/revision/latest?cb=20201009191412"
+    },
+    {
+        "hero": "Bane",
+        "lang": "en",
+        "lyrics": "The rebirth of my dream means the end of a myriad others.",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/9/9a/Vo_bane_bane_respawn_08.mp3/revision/latest?cb=20201009192007"
+    },
+    {
+        "hero": "Bane",
+        "lang": "en",
+        "lyrics": "A vish yoo stavin arra ah ah ah!",
+        "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a0/Vo_bane_bane_anger_03.mp3/revision/latest?cb=20201009191431"
     }
 ]
